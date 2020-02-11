@@ -23,12 +23,14 @@ This migration method is "smart" because:
 <li>It is has, besides a very short "switch over moment", no impact on the StorSimple 8000 operation.</li>
 <li>It is done in Azure using virtual resources that can be discared after the migration.</li>
 <br>
+<br>
 </p>
-<b>This migration method is guided in detail in this document to make this migration as easy as possible for you</b>
+<h2>This migration method is guided in detail in this document to make this migration as easy as possible for you</h2>
 <br>
 <br>
 
-<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/storsimple-files-migration-overview.png"></img>
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/storsimple-files-migration-overview.png" alt="Migration overview" width=1000 height=800>
+
 
 
 <h2>High level overview of the migration process</h2>
