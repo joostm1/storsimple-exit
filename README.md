@@ -26,3 +26,4 @@ This migration method is "smart" because:
     <li>Files on Azure Files share can be shared to doamin joined users via a Windows File Server with the File Sync Agent on top of it. </li>
 </ol>
 
+
