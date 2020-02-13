@@ -29,7 +29,7 @@ This migration method is "smart" because:
 <br>
 <br>
 
-<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/storsimple-files-migration-overview.png" alt="Migration overview" width=3000 height=1688>
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/storsimple-files-migration-overview.png" alt="Migration overview">
 
 
 
@@ -53,11 +53,10 @@ These steps are outlined in the paragraphs below using the following names:
 <p>
 <h2>Create a StorSimple Virtual Appliance and assign snapshots to it</h2>
 <br>
-<li>Create a StorSimple 8010 or 8020 device as <a href="https://docs.microsoft.com/en-us/azure/storsimple/storsimple-8000-cloud-appliance-u2">per documentation</a><li>\
+<li>Create a StorSimple 8010 or 8020 device as <a href="https://docs.microsoft.com/en-us/azure/storsimple/storsimple-8000-cloud-appliance-u2">per documentation</a><li>
   <ul>
     <li>Create this device with device manager that also manages the physical StorSimple devices</li>
     <li>A single 8020 device can manage 64TB of capacity. Create 8020 devices as needed to manage all the capacity of your physical devices</li>
-
 </ul>
 
 
