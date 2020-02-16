@@ -49,10 +49,12 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
     <li>Anything above 4 cores and 32GB of RAM will do.</li>
     <li>Add an additional 512GB disk to the server that will serve later for hosting the syncgroups.</li>
     <li>Configure the iSCSI client on this <code>syncserver-azure</code></li>
-    <li>Go to "Server Manager", select "Tools" and select "iSCSI initiator"</li>
-    <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-initiator.png"></li>
-    <li>Go the properties tab of the iSCSI initiator and copy the iSCSI Qualified Name (iqn) of your syncserver.
-    You'll need to add this iqn to the iSCSI volumes we'll create later on.</li>
+    <ul>
+        <li>Go to "Server Manager", select "Tools" and select "iSCSI initiator"</li>
+        <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-initiator.png"></li>
+        <li>Go the properties tab of the iSCSI initiator and copy the iSCSI Qualified Name (iqn) of your syncserver.
+        You'll need to add this iqn to the iSCSI volumes we'll create later on.</li>
+    </ul>
 </ul>    
 </p>
 
