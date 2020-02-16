@@ -5,6 +5,7 @@
 <h2>Introduction</h2>
 StorSimple 8000 mainstream support will <a href="https://support.microsoft.com/en-us/lifecycle/search/19605">end on July 1 2020</a>.
 A good alternative for StorSimple is the use of <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction">Azure Files</a> in combination with <a href="https://www.youtube.com/watch?v=Zm2w8-TRn-o">Azure File Sync</a>. This gives a similar solution to StorSimple:
+<br>
 <li>Tiered file storage for on-premise use</li>
 <li>Backup in Azure via snapshots of the file share</li>
 <br>
@@ -31,10 +32,10 @@ This migration method is "smart" because:
 </ol>
 These steps are outlined in the paragraphs below using the following name schema:
 <p class="a">
-    <li>storsimple-on-premise</li>
-    <li>storsimple-azure</li>
-    <li>syncserver-azure</li>
-    <li>syncserver-on-premise</li>
+    storsimple-on-premise
+    storsimple-azure
+    syncserver-azure
+    syncserver-on-premise
 </p>
 <br>
 <br>
@@ -47,7 +48,7 @@ These steps are outlined in the paragraphs below using the following name schema
     <li>Create this device with device manager that also manages the physical StorSimple devices</li>
     <li>A single 8020 device can manage 64TB of capacity. Create as many 8020 devices as needed to manage all the capacity of your physical devices</li>
 </ul>
-<li>Create clones 
+<li>Create clones of the volumes and assign them to the just crearted 
 
 
 </p>
