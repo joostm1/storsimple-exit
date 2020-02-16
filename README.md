@@ -72,7 +72,8 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
 <li>Create clones of the volumes and assign them to one of the <code>storsimple-azure</code> devices just created.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/clone-to-8020.png"></li>
     <ul>
-        <li>Assign the iqn of our <code>syncserver-azure</code> to each of the volumes you create</li>
+        <li>Assign the iqn of our <code>syncserver-azure</code> to each of the volumes you create.
+        <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/assign-iqn.png"></li>
     </ul>
 </ul>
 </p>
