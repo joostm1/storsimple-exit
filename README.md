@@ -23,6 +23,7 @@ This migration method is "smart" because:
 </p>
 
 
+<p>
 <h2>Steps in the migration process</h2>
 <ol>
     <li>Create a Server 2019 file server with the iSCSI client</li>
@@ -37,19 +38,22 @@ These steps are outlined in the paragraphs below using the following naming sche
     syncserver-azure
     syncserver-on-premise
 </pre></code>
+</p>
 
+<p>
 <h2>Create a Server 2019 server from the market place.</h2>
 <br>
 In Azure, create a file server using a Server 2019 image from the marketplace.
-<ol>
+<ul>
     <li>Create this server in the same region as your StorSimple Device Manager is located.</li>
     <li>Anything above 4 cores and 32GB of RAM will do.</li>
     <li>Add an additional 512GB disk to the server that will serve later for hosting the syncgroups.</li>
     <li>Configure the iSCSI client on this <code>syncserver-azure</code></li>
     <li>Go to "Server Manager", select "Tools" and select "iSCSI initiator"</li>
     <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-initiator.png"></li>
-</ol>    
-<h2>
+    <li>Go the properties tab of the iSCSI initiator and copy the iSCSI Qualified Name (iqn) of your syncserver</li>
+</ul>    
+</p>
 
 
 <p>
@@ -62,7 +66,6 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
 </ul>
 <li>Create clones of the volumes and assign them to <code>storsimple-azure</code> the just created.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/clone-to-8020.png"></li>
-
 
 
 </p>
