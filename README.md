@@ -97,6 +97,9 @@ F:\sgs\vol2
 </pre></code>
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/volume-sgmount.png">
 </li>
+<li>Install the file sync agent on <code>syncserver-azure</code>.
+<ul>
+    <li>Get the sync agent at https://aka.ms/afs/agent</li>
 </ul>
 
 
