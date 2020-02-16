@@ -28,7 +28,7 @@ This migration method is "smart" because:
 <ol>
     <li>Create a Server 2019 file server with the iSCSI client</li>
     <li>In Azure, create a StorSimple Virtual Appliance and assign the snapshots to it</li>
-    <li>Install the Sync Agent on this file server and use the volumes as sync target</li>
+    <li>Configure iSCSI and Azure File Sync on the file server</li>
     <li>Cutover day; sync the last changes and switch to Azure Files + Sync</li>
 </ol>
 These steps are outlined in the paragraphs below using the following naming scheme:
@@ -79,6 +79,14 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
 </p>
 
 <p>
+<h2>Configure iSCSI and Azure File Sync on the file server</h2>
+Now it is time to go to yoyr new <code>syncserver-azure</code> and configure the newly assigned volumes.
+Launch the "iSCSI Initiator" and add you <code>storsimple-azure</code> as a target portal.
+<img src=">
+
+
+
+
 <h2>Share these volumes via iSCSI to a Windows 2012 or -2016 file server</h2>
 <h2>Install the Sync Agent on this file server and use the volumes as sync target</h2>
 <h2>Cutover day; sync the last changes and switch to Azure Files + Sync</h2>
