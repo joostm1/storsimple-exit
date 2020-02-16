@@ -60,8 +60,8 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
     <li>Create this device with device manager that also manages the physical StorSimple devices</li>
     <li>A single 8020 device can manage 64TB of capacity. Create as many 8020 devices as needed to manage all the capacity of your physical devices</li>
 </ul>
-<li>Create clones of the volumes and assign them to <code>storsimple-azure</clode> the just created.<li>
-<li><img src="https://github.com/joostm1/storsimple-exit/blob/master/content/clone-to-8020.png"><li>
+<li>Create clones of the volumes and assign them to <code>storsimple-azure</code> the just created.
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/clone-to-8020.png"></li>
 
 
 
