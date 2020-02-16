@@ -89,17 +89,20 @@ Now it is time to go to your new <code>syncserver-azure</code> and configure the
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-target.png"></li>
 <li>Auto configure all volumes that are assigned to the syncserver-azure iqn.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-autoconfigure.png"></li>
-<li>Mount each volume in a folder corresponding to the volume name. For example:
+<li>Launch <b>diskmgmt.msc</b> and mount each volume in a folder corresponding to the volume name. For example:
 <pre><code>
 F:\sgs\vol0
 F:\sgs\vol1
 F:\sgs\vol2
 </pre></code>
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/volume-sgmount.png">
-
 </li>
-
 </ul>
+
+
+
+
+
 </p>
 
 
