@@ -39,15 +39,16 @@ These steps are outlined in the paragraphs below using the following naming sche
 </pre></code>
 
 <h2>Create a Server 2019 server from the market place.</h2>
+<br>
 In Azure, create a file server using a Server 2019 image from the marketplace.
-<li>Create this server in the same region as your StorSimple Device Manager is located.<li>
-<li>Anything above 4 cores and 32GB of RAM will do.<li>
-<li>Add an additional 512GB disk to the server that will serve later for hosting the syncgroups.
-<li>Configure the iSCSI client on this <code>syncserver-azure</code>
-<lu>
+<ol>
+    <li>Create this server in the same region as your StorSimple Device Manager is located.</li>
+    <li>Anything above 4 cores and 32GB of RAM will do.</li>
+    <li>Add an additional 512GB disk to the server that will serve later for hosting the syncgroups.</li>
+    <li>Configure the iSCSI client on this <code>syncserver-azure</code></li>
     <li>Go to "Server Manager", select "Tools" and select "iSCSI initiator"</li>
     <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-initiator.png"></li>
-    
+</ol>    
 <h2>
 
 
