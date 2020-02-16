@@ -31,12 +31,11 @@ This migration method is "smart" because:
     <li>Cutover day; sync the last changes and switch to Azure Files + Sync</li>
 </ol>
 These steps are outlined in the paragraphs below using the following name schema:
-<p class="a">
+<br>
     storsimple-on-premise
     storsimple-azure
     syncserver-azure
     syncserver-on-premise
-</p>
 <br>
 <br>
 In Azure, create a Server 2019 server from the market place.
