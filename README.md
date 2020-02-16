@@ -32,12 +32,12 @@ This migration method is "smart" because:
 </ol>
 These steps are outlined in the paragraphs below using the following name schema:
 <br>
-<code>
+<pre><code>
     storsimple-on-premise
     storsimple-azure
     syncserver-azure
     syncserver-on-premise
-</code>
+</pre></code>
 <br>
 <br>
 <h2>Create a Server 2019 server from the market place.<h2>
