@@ -52,6 +52,7 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
     <ul>
         <li>Go to "Server Manager", select "Tools" and select "iSCSI initiator"</li>
         <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-initiator.png"></li>
+        <br>
         <li>Go the properties tab of the iSCSI initiator and copy the iSCSI Qualified Name (iqn) of your syncserver.
         <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/isci-iqn.png">
         You'll need to add this iqn to the iSCSI volumes we'll create later.</li>
