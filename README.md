@@ -60,19 +60,21 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
 </ul>    
 </p>
 
-
 <p>
 <h2>Create a StorSimple Virtual Appliance and assign snapshots to it</h2>
 <br>
-<li>Create a StorSimple 8010 or 8020 device as <a href="https://docs.microsoft.com/en-us/azure/storsimple/storsimple-8000-cloud-appliance-u2">per documentation</a></li>
+<ul>
+    <li>Create a number of StorSimple 8010 or 8020 devices as <a href="https://docs.microsoft.com/en-us/azure/storsimple/storsimple-8000-cloud-appliance-u2">per documentation</a></li>
   <ul>
-    <li>Create this device with device manager that also manages the physical StorSimple devices</li>
+    <li>Create this device with same device manager as the one that manages the physical StorSimple devices</li>
     <li>A single 8020 device can manage 64TB of capacity. Create as many 8020 devices as needed to manage all the capacity of your physical devices</li>
-</ul>
-<li>Create clones of the volumes and assign them to <code>storsimple-azure</code> the just created.
+  </ul>
+<li>Create clones of the volumes and assign them to one of the <code>storsimple-azure</code> devices just created.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/clone-to-8020.png"></li>
-
-
+    <ul>
+        <li>Assign the iqn of our <code>syncserver-azure</code> to each of the volumes you create</li>
+    </ul>
+</ul>
 </p>
 
 <p>
