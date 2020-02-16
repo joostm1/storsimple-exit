@@ -85,11 +85,12 @@ Now it is time to go to yoyr new <code>syncserver-azure</code> and configure the
 <li>Launch the "iSCSI Initiator" and add you <code>storsimple-azure</code> as a target portal.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-target.png"></li>
 <li>Auto configure all volumes that are assigned to the syncserver-azure iqn.
-<img src=">
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-autoconfigure.png"></li>
+</ul>
+</p>
 
 
 
 
-<h2>Share these volumes via iSCSI to a Windows 2012 or -2016 file server</h2>
-<h2>Install the Sync Agent on this file server and use the volumes as sync target</h2>
-<h2>Cutover day; sync the last changes and switch to Azure Files + Sync</h2>
+
+
