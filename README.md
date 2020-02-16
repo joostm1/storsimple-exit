@@ -9,7 +9,7 @@ A good alternative for StorSimple is the use of <a href="https://docs.microsoft.
 <li>Tiered file storage for on-premise use</li>
 <li>Backup in Azure via snapshots of the file share</li>
 <br>
-Besides these cool features, a smart migration method from StorSimdple to Azure Files was developed by the Azure Files product team and <a href="https://myignite.techcommunity.microsoft.com/sessions/84177?source=sessions">presented at Ignite 2020</a>.
+Besides these cool features, a smart migration method from StorSimdple to Azure Files was developed by the Azure Files product team and <a href="https://myignite.techcommunity.microsoft.com/sessions/84177?source=sessions">presented at Ignite 2019</a>.
 This migration method is "smart" because:
 <br>
 <li>It is has, besides a very short "switch over moment", no impact on the ongoing StorSimple 8000 operation.</li>
@@ -41,19 +41,20 @@ These steps are outlined in the paragraphs below using the following naming sche
 </p>
 
 <p>
-<h2>Create a Server 2019 server from the market place.</h2>
+<br>
+<h2>1. Create a Server 2019 server from the market place.</h2>
 <br>
 In Azure, create a file server using a Server 2019 image from the marketplace.
 <ul>
     <li>Create this server in the same region as your StorSimple Device Manager is located.</li>
     <li>Anything above 4 cores and 32GB of RAM will do.</li>
-    <li>Add an additional 512GB disk to the server that will serve later for hosting the syncgroups.</li>
+    <li>Add an additional 512GB disk to the server that will serve later for hosting the sync groups.</li>
     <li>Configure the iSCSI client on this <code>syncserver-azure</code></li>
     <ul>
         <li>Go to "Server Manager", select "Tools" and select "iSCSI initiator"</li>
         <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-initiator.png"></li>
         <br>
-        <li>Go the properties tab of the iSCSI initiator and copy the iSCSI Qualified Name (iqn) of your syncserver.
+        <li>Go the properties tab of the iSCSI initiator and copy the iSCSI Qualified Name (iqn) of your sync server.
         <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/isci-iqn.png">
         You'll need to add this iqn to the iSCSI volumes we'll create later.</li>
     </ul>
@@ -61,13 +62,14 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
 </p>
 
 <p>
-<h2>Create a StorSimple Virtual Appliance and assign snapshots to it</h2>
+<br>
+<h2>2. Create a StorSimple Virtual Appliance and assign snapshots to it</h2>
 <br>
 <ul>
     <li>Create a number of StorSimple 8010 or 8020 devices as <a href="https://docs.microsoft.com/en-us/azure/storsimple/storsimple-8000-cloud-appliance-u2">per documentation</a></li>
   <ul>
     <li>Create this device with same device manager as the one that manages the physical StorSimple devices</li>
-    <li>A single 8020 device can manage 64TB of capacity. Create as many 8020 devices as needed to manage all the capacity of your physical devices</li>
+    <li>A single 8020 device can manage up to 64TB of capacity. Create as many 8020 devices as needed to manage all the capacity of your physical devices</li>
   </ul>
 <li>Create clones of the volumes and assign them to one of the <code>storsimple-azure</code> devices just created.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/clone-to-8020.png"></li>
@@ -79,10 +81,11 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
 </p>
 
 <p>
-<h2>Configure iSCSI and Azure File Sync on the file server</h2>
-Now it is time to go to yoyr new <code>syncserver-azure</code> and configure the newly assigned volumes.
+<br>
+<h2>3. Configure iSCSI and Azure File Sync on the file server</h2>
+Now it is time to go to your new <code>syncserver-azure</code> and configure the newly assigned volumes.
 <ul>
-<li>Launch the "iSCSI Initiator" and add you <code>storsimple-azure</code> as a target portal.
+<li>Launch the "iSCSI Initiator" and add <code>storsimple-azure</code> as a target portal.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-target.png"></li>
 <li>Auto configure all volumes that are assigned to the syncserver-azure iqn.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-autoconfigure.png"></li>
@@ -92,7 +95,7 @@ F:\sgs\vol0
 F:\sgs\vol1
 F:\sgs\vol2
 </pre></code>
-<img src=">
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/volume-sgmount.png">
 
 </li>
 
