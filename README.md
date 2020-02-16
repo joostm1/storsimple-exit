@@ -25,8 +25,8 @@ This migration method is "smart" because:
 
 <h2>Steps in the migration process</h2>
 <ol>
+    <li>Create a Server 2019 file server with the iSCSI client<li>
     <li>In Azure, create a StorSimple Virtual Appliance and assign the snapshots to it</li>
-    <li>Share these volumes via iSCSI to a Windows 2012 or -2016 or -2019 file server</li>
     <li>Install the Sync Agent on this file server and use the volumes as sync target</li>
     <li>Cutover day; sync the last changes and switch to Azure Files + Sync</li>
 </ol>
@@ -39,6 +39,18 @@ These steps are outlined in the paragraphs below using the following name schema
 </p>
 <br>
 <br>
+In Azure, create a Server 2019 server from the market place.
+<li>Create this server in the same region as your StorSimple Deveice Manager is located.<li>
+<li>Anything above 4 cores and 32GB of RAM will do.<li>
+<li>Add an additional 512GB disk to the server that will serve later for hosting the syncgroups.
+<li>Configure the iSCSI client on this <code>syncserver-azure</code>
+<lu>
+    <li>Go to "Server Manager", select "Tools" and select "iSCSI initiator"br
+    <img src=<li>
+    
+<p>
+<h2>
+
 
 <p>
 <h2>Create a StorSimple Virtual Appliance and assign snapshots to it</h2>
@@ -48,7 +60,9 @@ These steps are outlined in the paragraphs below using the following name schema
     <li>Create this device with device manager that also manages the physical StorSimple devices</li>
     <li>A single 8020 device can manage 64TB of capacity. Create as many 8020 devices as needed to manage all the capacity of your physical devices</li>
 </ul>
-<li>Create clones of the volumes and assign them to the just crearted 
+<li>Create clones of the volumes and assign them to <code>storsimple-azure</clode> the just created.<li>
+<li><img src="https://github.com/joostm1/storsimple-exit/blob/master/content/clone-to-8020.png"><li>
+
 
 
 </p>
