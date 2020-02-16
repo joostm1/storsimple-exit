@@ -5,20 +5,19 @@
 <h2>Introduction</h2>
 StorSimple 8000 mainstream support will <a href="https://support.microsoft.com/en-us/lifecycle/search/19605">end on July 1 2020</a>.
 A good alternative for StorSimple is the use of <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction">Azure Files</a> in combination with <a href="https://www.youtube.com/watch?v=Zm2w8-TRn-o">Azure File Sync</a>. This gives a similar solution to StorSimple:
-<li>Tiered file storage</li>
+<li>Tiered file storage for on-premise use</li>
 <li>Backup in Azure via snapshots of the file share</li>
 <br>
 Besides these cool features, a smart migration method from StorSimdple to Azure Files was developed by the Azure Files product team and <a href="https://myignite.techcommunity.microsoft.com/sessions/84177?source=sessions">presented at Ignite 2020</a>.
 This migration method is "smart" because:
 <br>
-<li>It is has, besides a very short "switch over moment", no impact on the StorSimple 8000 operation.</li>
+<li>It is has, besides a very short "switch over moment", no impact on the ongoing StorSimple 8000 operation.</li>
 <li>It is done in Azure using virtual resources that can be discared after the migration.</li>
 <br>
 <br>
 <h2>The goal of this document is to guide you through this migration with little as possible effort.</h2>
 <br>
 <br>
-Here's an overview of the migration setup.
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/storsimple-files-migration-overview.png" alt="Migration overview">
 </p>
 
@@ -43,11 +42,12 @@ These steps are outlined in the paragraphs below using the following name schema
 <p>
 <h2>Create a StorSimple Virtual Appliance and assign snapshots to it</h2>
 <br>
-<li>Create a StorSimple 8010 or 8020 device as <a href="https://docs.microsoft.com/en-us/azure/storsimple/storsimple-8000-cloud-appliance-u2">per documentation</a><li>
+<li>Create a StorSimple 8010 or 8020 device as <a href="https://docs.microsoft.com/en-us/azure/storsimple/storsimple-8000-cloud-appliance-u2">per documentation</a></li>
   <ul>
     <li>Create this device with device manager that also manages the physical StorSimple devices</li>
     <li>A single 8020 device can manage 64TB of capacity. Create as many 8020 devices as needed to manage all the capacity of your physical devices</li>
 </ul>
+<li>Create clones 
 
 
 </p>
