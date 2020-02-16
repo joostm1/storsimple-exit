@@ -30,17 +30,15 @@ This migration method is "smart" because:
     <li>Install the Sync Agent on this file server and use the volumes as sync target</li>
     <li>Cutover day; sync the last changes and switch to Azure Files + Sync</li>
 </ol>
-These steps are outlined in the paragraphs below using the following name schema:
-<br>
+These steps are outlined in the paragraphs below using the following naming scheme:
 <pre><code>
     storsimple-on-premise
     storsimple-azure
     syncserver-azure
     syncserver-on-premise
 </pre></code>
-<br>
-<br>
-<h2>Create a Server 2019 server from the market place.<h2>
+
+<h2>Create a Server 2019 server from the market place.</h2>
 In Azure, create a file server using a Server 2019 image from the marketplace.
 <li>Create this server in the same region as your StorSimple Device Manager is located.<li>
 <li>Anything above 4 cores and 32GB of RAM will do.<li>
