@@ -25,21 +25,24 @@ This migration method is "smart" because:
 
 <h2>Steps in the migration process</h2>
 <ol>
-    <li>Create a Server 2019 file server with the iSCSI client<li>
+    <li>Create a Server 2019 file server with the iSCSI client</li>
     <li>In Azure, create a StorSimple Virtual Appliance and assign the snapshots to it</li>
     <li>Install the Sync Agent on this file server and use the volumes as sync target</li>
     <li>Cutover day; sync the last changes and switch to Azure Files + Sync</li>
 </ol>
 These steps are outlined in the paragraphs below using the following name schema:
 <br>
+<code>
     storsimple-on-premise
     storsimple-azure
     syncserver-azure
     syncserver-on-premise
+</code>
 <br>
 <br>
-In Azure, create a Server 2019 server from the market place.
-<li>Create this server in the same region as your StorSimple Deveice Manager is located.<li>
+<h2>Create a Server 2019 server from the market place.<h2>
+In Azure, create a file server using a Server 2019 image from the marketplace.
+<li>Create this server in the same region as your StorSimple Device Manager is located.<li>
 <li>Anything above 4 cores and 32GB of RAM will do.<li>
 <li>Add an additional 512GB disk to the server that will serve later for hosting the syncgroups.
 <li>Configure the iSCSI client on this <code>syncserver-azure</code>
