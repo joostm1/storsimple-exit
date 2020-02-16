@@ -81,7 +81,10 @@ In Azure, create a file server using a Server 2019 image from the marketplace.
 <p>
 <h2>Configure iSCSI and Azure File Sync on the file server</h2>
 Now it is time to go to yoyr new <code>syncserver-azure</code> and configure the newly assigned volumes.
-Launch the "iSCSI Initiator" and add you <code>storsimple-azure</code> as a target portal.
+<ul>
+<li>Launch the "iSCSI Initiator" and add you <code>storsimple-azure</code> as a target portal.
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/iscsi-target.png"></li>
+<li>Auto configure all volumes that are assigned to the syncserver-azure iqn.
 <img src=">
 
 
