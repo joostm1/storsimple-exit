@@ -16,7 +16,7 @@ This migration method is "smart" because:
 <li>It is done in Azure using virtual resources that can be discared after the migration.</li>
 <br>
 <br>
-<h2>The goal of this document is to guide you through this migration with little as possible effort.</h2>
+<h2>This document guides you quickly through this procedure.</h2>
 <br>
 <br>
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/storsimple-files-migration-overview.png" alt="Migration overview">
@@ -97,6 +97,8 @@ F:\sgs\vol2
 </pre></code>
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/volume-sgmount.png">
 </li>
+<li>Create a sync service 
+
 <li>Install the file sync agent on <code>syncserver-azure</code>.
 <ul>
     <li>Get the sync agent at https://aka.ms/afs/agent</li>
