@@ -103,7 +103,7 @@ Deploy Azure File Sync on <code>syncserver-azure</code> as described <a href="ht
 
 For <b>Cloud Endpoint</b>, you have a choice between <a href="https://azure.microsoft.com/en-us/pricing/details/storage/files/">"Premium and Standard"</a> storage. For larger deployments, premuum storage is recommended.</li>.
 
-Specify the mounted volumes as Server Endpoint for File Sync:
+Specify the mounted volumes as <b>Server Endpoint</b> for File Sync:
 <pre><code>
 F:\sgs\vol0
 F:\sgs\vol1
@@ -117,7 +117,29 @@ The environment we've build by now should look a bit like this one.
 </p>
 
 
+<p>
+<h2>4. Cutover day; sync the last changes and switch to Azure Files + Sync</h2>
+Depending on the size / # files, the initial data transfer to Azure Files may take multiple weeks.
+Wait for sync to completely move all files from the vm to the Azure file share. You can verify that sync is complete with the following steps:
+<ol>
+<li>Open the Event Viewer and navigate to Applications and Services</li>
+<li>Navigate and open Microsoft\FileSync\Agent\Telemetry</li>
+<li>Look for the most recent event 9102, which corresponds to a completed sync session</li>
+<li>Select Details and confirm that the SyncDirection value is Upload</li>
+<li>Check the both the HResult and the PerItemErrorCount and confirm that they are both 0.</li>
+</ol>
+This means that the sync session was successful. If HResult is a non-zero value, then there
+was an error during sync. If the PerItemErrorCount is greater than 0 then some files or
+folders did not sync properly. It is possible to have an HResult of 0 but a
+PerItemErrorCount that is greater than 0 so you must check both.
 
-
+After initial sync completion, create clones of the latest StorSimple backups and mount them again on these server endpoints.
+<pre><code>
+F:\sgs\vol0
+F:\sgs\vol1
+F:\sgs\vol2
+</pre></code>
+When this is also complete, decommission the StorSimple infrastructure and enjoy a much simpler life :-)
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/migration-overview-after.png">
 
 
