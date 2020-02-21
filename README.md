@@ -97,7 +97,7 @@ F:\sgs\vol2
 </pre></code>
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/volume-sgmount.png">
 </li>
-<li>Create a sync service 
+<li>Create a sync service as described <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portalhere"></a></li>
 
 <li>Install the file sync agent on <code>syncserver-azure</code>.
 <ul>
