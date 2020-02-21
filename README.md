@@ -99,10 +99,9 @@ F:\sgs\vol2
 </li>
 <li>Create a sync service as described <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portalhere"></a></li>
 
-<li>Install the file sync agent on <code>syncserver-azure</code>.
-<ul>
-    <li>Get the sync agent at https://aka.ms/afs/agent</li>
-</ul>
+<li>Deploy Azure File Sync on <code>syncserver-azure</code> as described <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portal">here</a>
+
+For Cloud Endpoint, you have a choice between <a href="https://azure.microsoft.com/en-us/pricing/details/storage/files/">"Premium and Standard"</a> storage. For larger deployments, premuum storage is recommended.</li>.
 
 
 
