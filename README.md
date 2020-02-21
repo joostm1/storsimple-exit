@@ -97,16 +97,23 @@ F:\sgs\vol2
 </pre></code>
 <img src="https://github.com/joostm1/storsimple-exit/blob/master/content/volume-sgmount.png">
 </li>
-<li>Create a sync service as described <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portalhere"></a></li>
+</ul>
 
-<li>Deploy Azure File Sync on <code>syncserver-azure</code> as described <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portal">here</a>
+Deploy Azure File Sync on <code>syncserver-azure</code> as described <a href="https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portal">here.</a>
 
-For Cloud Endpoint, you have a choice between <a href="https://azure.microsoft.com/en-us/pricing/details/storage/files/">"Premium and Standard"</a> storage. For larger deployments, premuum storage is recommended.</li>.
+For <b>Cloud Endpoint</b>, you have a choice between <a href="https://azure.microsoft.com/en-us/pricing/details/storage/files/">"Premium and Standard"</a> storage. For larger deployments, premuum storage is recommended.</li>.
 
+Specify the mounted volumes as Server Endpoint for File Sync:
+<pre><code>
+F:\sgs\vol0
+F:\sgs\vol1
+F:\sgs\vol2
+</pre></code>
 
+The sync agent will transfer all data from the mounted volumes to Azure Files. 
 
-
-
+The environment we've build by now should look a bit like this one.
+<img src="https://github.com/joostm1/storsimple-exit/blob/master/content/migration-overview.png">
 </p>
 
 
