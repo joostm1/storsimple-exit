@@ -1,5 +1,5 @@
 <h1>StorSimple Evacuation</h1>
-<h2>Low imapact migration of StorSimple data to Azure Files</h2>
+<h2>Low impact migration of StorSimple data to Azure Files</h2>
 
 <p>
 <h2>Introduction</h2>
